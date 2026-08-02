@@ -1,0 +1,1 @@
+<view><view><view>ture真 false假</view><view>学习vue</view><view>{{a}}</view><view><rich-text nodes="{{b}}"/></view><view id="{{c}}"></view><view>{{d}}</view></view></view>

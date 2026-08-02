@@ -10,7 +10,7 @@
 			}
 		},
 		{
-			"path" : "pages/tabbar/classify/classify",
+			"path": "pages/tabbar/classify/classify",
 			"style" : 
 			{
 				"navigationBarTitleText" : "分类",
@@ -52,30 +52,35 @@
 			}
 		}
 		
+		
+
+		
 
 		
 	],
 	"globalStyle": {
-		"navigationBarTextStyle": "black",
-		"navigationBarTitleText": "uni-app",
+		"navigationBarTextStyle": "white",
+		"navigationBarTitleText": "壁纸百宝箱",
 		"navigationBarBackgroundColor": "#F8F8F8",
-		"backgroundColor": "#F8F8F8"
+		"backgroundColor": "#F8F8F8",
+		"backgroundColor":"#CAF0Df",
+		"enablePullDownRefresh":true
 	},
 	"uniIdRouter": {},
 	"tabBar":{
 		"color":"#999",
 		"selectedColor":"#00b783",
-		"borderStyle":"#fff",
-		"backgroundColor":"#fff",
+		"borderStyle":"white",
+		"backgroundColor":"white",
 		"list":[
 			
 			{
 				"pagePath":"pages/tabbar/index/index",
 				"text":"首页",
 				/*点击前图片*/
-				"iconPath":"static/tabar1.png",
+				"iconPath":"static/tabar1.jpeg",
 				/*点击后图片*/
-				"selectedIconPath":"static/tabaron1.png"
+				"selectedIconPath":"static/tabaron1.jpg"
 			},
 			{
 				"pagePath":"pages/tabbar/classify/classify",
