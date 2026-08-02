@@ -1,0 +1,1 @@
+<view><navbar wx:if="{{b}}" bindonEvent="{{a}}" u-i="870d23aa-0" bind:__l="__l" u-p="{{b}}"/><view>{{c}}</view><view><view wx:for="{{d}}" wx:for-item="item">{{item.a}}</view></view></view>

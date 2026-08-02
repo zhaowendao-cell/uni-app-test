@@ -1,0 +1,43 @@
+{
+  "pages": [
+    "pages/tabbar/index/index",
+    "pages/tabbar/classify/classify",
+    "pages/tabbar/study/study",
+    "pages/tabbar/mine/mine",
+    "pages/tabbar/mine/login"
+  ],
+  "window": {
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "壁纸百宝箱",
+    "navigationBarBackgroundColor": "#F8F8F8",
+    "backgroundColor": "#CAF0Df",
+    "enablePullDownRefresh": true
+  },
+  "tabBar": {
+    "color": "#999",
+    "selectedColor": "#00b783",
+    "borderStyle": "white",
+    "backgroundColor": "white",
+    "list": [
+      {
+        "pagePath": "pages/tabbar/index/index",
+        "text": "首页",
+        "iconPath": "static/tabar1.jpeg",
+        "selectedIconPath": "static/tabaron1.jpg"
+      },
+      {
+        "pagePath": "pages/tabbar/classify/classify",
+        "text": "分类"
+      },
+      {
+        "pagePath": "pages/tabbar/study/study",
+        "text": "学习"
+      },
+      {
+        "pagePath": "pages/tabbar/mine/mine",
+        "text": "我的"
+      }
+    ]
+  },
+  "usingComponents": {}
+}
