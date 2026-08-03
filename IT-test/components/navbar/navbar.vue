@@ -1,94 +1,98 @@
 <template>
 	<view class="example-boby">
-		<view id="my_navbar"> 
-		<view class="input-view">
-			<image class="input-search" src="/static/search.webp" mode="aspectFit"></image>
-			<input class="nav-bar-input" 
-			v-model="IndexInputTitle" 
-			confirm-type="search"  
-			type="text" 
-			:placeholder="title" />
-		</view>
-		</view>
-		<view>
+			<view class="input-view">
+				<image class="input-search" src="/static/search.webp" mode="aspectFit"></image>
+				<!-- aspectFit:等比例适配-->
+				<input class="nav-bar-input" 
+				v-model.lazy.trim="IndexInputTitle" 
+				confirm-type="search"  
+				type="text" 
+				:placeholder="title" />
+			</view>
+		<view class="flex-view">
 			<ul>
-			<li v-for="(x,y) in titleList" :key="y">{{x}}</li>
+				<li v-for="(x,y) in titleList" :key="y">{{x}}</li>
 			</ul>
-			<button @click="sendClickHandle">传递</button>
+			<button id="sendClickHandle-flex" @click="sendClickHandle">传递</button>
+			<p>{{IndexInputTitle}}</p>
 		</view>
 	</view>
 </template>
 
 <script>
-	export default {
-		//export default :向外交出一份组件配置对象
-		data() {
-			//函数执行之后，return 出去的对象，才会被 Vue 内部接管，做成响应式数据
-			return {
-				message:"自定义事件-数据传输",
-				IndexInputTitle:"",
+export default {
+	data() {
+		return {
+			message: "自定义事件-数据传输",
+			IndexInputTitle: "",
+		}
+	},
+	props: {
+		title: {
+			type: String,
+			default: ""
+		},
+		titleList: {
+			type: Array,
+			default() {
+				return []
 			}
 		},
-		props:{
-			title:{
-				type:String,
-				default:""
-			},
-			titleList:{
-				type:Array,
-				//数组与对象必须使用函数返回
-				default:function(){
-					return []
-				}
-			},
+	},
+	methods: {
+		sendClickHandle() {
+			this.$emit("onEvent", this.message)
 		},
-		methods: {
-			//methods:自定义函数
-			sendClickHandle(){
-				this.$emit("onEvent",this.message)
-			}
-		},
-	}
+	},
+}
 </script>
 
-<style lang="scss">
-.input-view{
+<style scoped lang="scss">
+.example-boby {
+	padding: var(--status-bar-height) 300rpx 0 30rpx;
+	height: 90rpx;
+	background: #fff;
+	box-shadow: 0 5rpx 10rpx rgba(0, 0, 0, 0.08);
+	align-items: center;
+}
+.input-view {
 	display: flex;
 	flex-direction: row;
 	flex: 1;
 	background-color: #f8f8f8;
-	height: 30px;
-	border-radius: 15px;
-	padding: 0 10px;
+	height: 80rpx;
+	border-radius: 40rpx;
+	padding: 5 10rpx;
 	flex-wrap: nowrap;
-	margin: 7px 0;
-	line-height: 30px;
+	margin: 10rpx 0;
+	align-items: center;
 }
 .input-search {
-  width: 44rpx;
-  height: 44rpx;
-  margin-right: 8rpx;
+	width: 70rpx;
+	height: 45rpx;
+	margin-right: 10rpx;
 }
-.nav-bar-input{
-	height: 30px;
-	line-height:100px;
-	width: 570rpx;
-	padding: 50 5px;
+.nav-bar-input {
+	flex: 1;
+	height: 60rpx;
 	font-size: 28rpx;
-	background-color: #f8f8f8;
+	background-color: transparent;
+	border: none;
+	outline: none;
 }
-.example-boby{
-	padding: 0;
+.flex-view{
+	position: relative;
+	#sendClickHandle-flex{
+		display: flex;
+		height: 60rpx;
+		width: 200rpx;
+		font-size: 28rpx;
+		border-radius: 30rpx;
+		align-items: center;
+		top: -80rpx;
+		left:350rpx;
+		position: absolute;
 }
-#my_navbar{
-	height: 88rpx;
-	box-shadow: 0 2rpx 10rpx rgba(0,0,0,0.08);
-	padding-top: var(--status-bar-height);
-	position: static;
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	padding: 0 30rpx;
-	background-color: #ffffff;
+
 }
 </style>
