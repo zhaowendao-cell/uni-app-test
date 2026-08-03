@@ -2,29 +2,45 @@
 	<!--骨架（HTML）-->
 	<view>
 		<div id="mine-div">
-			<navigator url="/pages/tabbar/mine/login">
+			<navigator url="/pages/tabbar/mine/login?massage=信息&age=数字">
 			    <button id="mine-button">登录</button>
 			  </navigator>
+			  <button @click="remove">删除</button>
 		</div>
 	</view>
 	
 </template>
 
 <script>
+import { ref } from 'vue';
+
 	//逻辑（JavaScript）
 	export default {
 		data() {
 			return {
-				
+
 			}
 		},
 		methods: {
-			
-		}
+			remove(){
+				uni.showModal({
+					title:"是否删除？",
+					cancelText:"取消删除",
+					confirmText:"确认删除",
+					success:(res)=>{
+						console.log(res);
+						if (res.confirm){
+						console.log("确认删除")}
+						else{
+						console.log("取消删除")}
+					}
+				})
+			}
+		},
 	}
 </script>
 
-<style>
+<style scoped lang="scss">
 	/*样式（CSS）*/
 	#mine-button{
 		background-color: #666666;

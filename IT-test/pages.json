@@ -5,18 +5,18 @@
 			"style" : 
 			{
 				"navigationBarTitleText" : "首页",
-				"navigationStyle":"custom"
-				
+				"navigationStyle":"custom",
+				"enablePullDownRefresh":true
 			}
 		},
 		{
-			"path" : "pages/tabbar/classify/classify",
+			"path": "pages/tabbar/classify/classify",
 			"style" : 
 			{
 				"navigationBarTitleText" : "分类",
 				"navigationBarBackgroundColor":"#00b783",
-				"navigationBarTextStyle":"white",
-				"enablePullDownRefresh":false
+				"navigationBarTextStyle":"white"
+				
 			}
 		},
 		{
@@ -25,8 +25,7 @@
 			{
 				"navigationBarTitleText" : "学习",
 				"navigationBarBackgroundColor":"#00b783",
-				"navigationBarTextStyle":"white",
-				"enablePullDownRefresh":false
+				"navigationBarTextStyle":"white"
 			}
 		},
 		
@@ -36,8 +35,7 @@
 			{
 				"navigationBarTitleText" : "个人中心",
 				"navigationBarBackgroundColor":"#00b783",
-				"navigationBarTextStyle":"white",
-				"enablePullDownRefresh":false
+				"navigationBarTextStyle":"white"
 			}
 		},
 		
@@ -47,35 +45,39 @@
 			{
 				"navigationBarTitleText" : "登录",
 				"navigationBarBackgroundColor":"#00b783",
-				"navigationBarTextStyle":"white",
-				"enablePullDownRefresh":false
+				"navigationBarTextStyle":"white"
 			}
 		}
+		
+		
+
 		
 
 		
 	],
 	"globalStyle": {
-		"navigationBarTextStyle": "black",
-		"navigationBarTitleText": "uni-app",
+		"navigationBarTextStyle": "white",
+		"navigationBarTitleText": "壁纸百宝箱",
 		"navigationBarBackgroundColor": "#F8F8F8",
-		"backgroundColor": "#F8F8F8"
+		"backgroundColor": "#F8F8F8",
+		"backgroundColor":"#CAF0Df",
+		"enablePullDownRefresh":false
 	},
 	"uniIdRouter": {},
 	"tabBar":{
 		"color":"#999",
 		"selectedColor":"#00b783",
-		"borderStyle":"#fff",
-		"backgroundColor":"#fff",
+		"borderStyle":"white",
+		"backgroundColor":"white",
 		"list":[
 			
 			{
 				"pagePath":"pages/tabbar/index/index",
 				"text":"首页",
 				/*点击前图片*/
-				"iconPath":"static/tabar1.png",
+				"iconPath":"static/tabar1.jpeg",
 				/*点击后图片*/
-				"selectedIconPath":"static/tabaron1.png"
+				"selectedIconPath":"static/tabaron1.jpg"
 			},
 			{
 				"pagePath":"pages/tabbar/classify/classify",
