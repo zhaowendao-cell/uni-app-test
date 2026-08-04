@@ -1,0 +1,1 @@
+<view class="data-v-23ed4277"><view class="data-v-23ed4277" id="mine-div"><navigator class="data-v-23ed4277" url="/pages/tabbar/mine/login?massage=信息&age=数字"><button class="data-v-23ed4277" id="mine-button">登录</button></navigator><button class="data-v-23ed4277" bindtap="{{a}}">删除</button></view></view>
